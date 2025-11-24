@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* use Inter from html import */
+:root {
+  --bg-gradient-start: #e6f6ff;
+  --bg-gradient-end: #fff7ed;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  @apply bg-gradient-to-br from-[color:var(--bg-gradient-start)] to-[color:var(--bg-gradient-end)] text-slate-900;
+  /* fallback */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* container helper */
+.app-container {
+  @apply max-w-4xl mx-auto p-6;
+}
+
+/* card */
+.card {
+  @apply bg-white/90 backdrop-blur-md rounded-xl shadow-soft border border-white/60;
+}
+
+/* accent button */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-semibold shadow-sm;
+  background-image: linear-gradient(90deg,#06b6d4,#7dd3fc);
+  color: white;
+}
+
+/* small utilities */
+.subtle {
+  @apply text-sm text-slate-600;
+}
